@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>AltShop - Feedback</title>
+    </head>
+    <body>
+ 
+        <!-- ===== ШАПКА: логотип + повернення на головну ===== -->
+        <header>
+            <img src="AltShop.svg" alt="AltShop logo">
+            <a href="golovna-storinka.html"><button type="button">Back to Home</button></a>
+        </header>
+ 
+        <main>
+            <h2>Feedback</h2>
+ 
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Personal Information</legend>
+ 
+                    <!-- Прізвище та ім'я -->
+                    <label for="fullname">Last name and first name:</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                    <br>
+ 
+                    <!-- E-mail -->
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+ 
+                    <!-- Вік -->
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="0" max="120" required>
+                    <br>
+ 
+                    <!-- Освіта: вибір одного з переліку -->
+                    <fieldset>
+                        <legend>Education (select one)</legend>
+                        <input type="radio" id="edu-full" name="education" value="full" required>
+                        <label for="edu-full">Full (secondary)</label>
+                        <br>
+                        <input type="radio" id="edu-incomplete" name="education" value="incomplete">
+                        <label for="edu-incomplete">Incomplete (secondary)</label>
+                        <br>
+                        <input type="radio" id="edu-higher" name="education" value="higher">
+                        <label for="edu-higher">Higher</label>
+                        <br>
+                        <input type="radio" id="edu-vocational" name="education" value="vocational">
+                        <label for="edu-vocational">Vocational</label>
+                    </fieldset>
+                </fieldset>
+ 
+                <!-- Мета зворотнього зв'язку: випадаючий список -->
+                <label for="purpose">Purpose of feedback:</label>
+                <select id="purpose" name="purpose" required>
+                    <option value="" selected disabled hidden>Select an option:</option>
+                    <option value="cooperation">Cooperation</option>
+                    <option value="rights-complaint">Complaint about rights violation</option>
+                    <option value="suggestion">Suggestion</option>
+                    <option value="error">Error report</option>
+                </select>
+                <br>
+ 
+                <!-- Детально: textarea з обмеженням висоти/ширини/кількості символів -->
+                <label for="details">Details:</label>
+                <br>
+                <textarea id="details" name="details" rows="6" cols="40" maxlength="500"></textarea>
+                <br>
+ 
+                <!-- Поле зі згодою на обробку інформації -->
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">I agree to the processing of my personal data</label>
+                <br>
+ 
+                <!-- Кнопка відправлення -->
+                <button type="submit">Submit</button>
+ 
+            </form>
+        </main>
+    </body>
+</html>
